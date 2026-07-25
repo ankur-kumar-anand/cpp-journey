@@ -24,4 +24,5 @@
     cout<<"Enter c: ";
     cin>>c;
     starTriangle(c);
+    return 0;
  }
