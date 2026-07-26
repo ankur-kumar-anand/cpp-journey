@@ -8,6 +8,7 @@ This repository documents my C++ learning journey.
 - Loops
 - Pattern Printing
 - Functions
+- pointers
 - Arrays
 - Strings
 - Recursion
