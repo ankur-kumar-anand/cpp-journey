@@ -1,0 +1,32 @@
+//Left Rotate an Array by One Position
+
+//Move every element one position to the left. The first element goes to the end.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    int arr[n];
+
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+
+    int first = arr[0];
+
+    for(int i=0;i<n-1;i++)
+        arr[i]=arr[i+1];
+
+    arr[n-1]=first;
+
+    cout<<"After rotation:\n";
+
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+
+    return 0;
+}
