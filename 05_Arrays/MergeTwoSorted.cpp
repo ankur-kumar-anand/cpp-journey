@@ -1,5 +1,5 @@
 //There are two sorted arrays a=[10,20,40,70,90,100] and b=[30,50,60,80]. 
-//This is a program to merge the two arrays a[] and b[]
+//This is a program to merge the two arrays a[] and b[].
 //expected output: [10,20,30,40,50,60,70,80,90,100]
 
 #include<iostream>
