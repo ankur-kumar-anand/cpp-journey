@@ -10,7 +10,7 @@ int main(){
         cout<<ele<<" \n";
     }
     
-    /*for(int i=v.size()-1; i>=0;i--){
-        cout<<v[i]<<" ";
+    /*for(int i=v.size()-1; i>=0;i--){   //for loop 
+        cout<<v[i]<<" ";                 //reverse
     }*/
 }
