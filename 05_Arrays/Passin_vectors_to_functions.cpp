@@ -3,11 +3,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//void change(vector<int> v){  //pass by value
+//void change(vector<int> v){  //pass by value = "make a copy"
 //    v[2]=99;
 //}
 
-void change(vector<int>& v){  //pass by reference
+void change(vector<int>& v){  //pass by reference = "give acess to original"
    v[2]=99;
 }
 
