@@ -61,3 +61,11 @@ int main() {
 
     return 0;
 }
+
+/*wave Array: method 2
+void sortInWave(vector<int>& arr){
+    for(int i=0;i<arr.size();i+=2){
+        if(i==arr.size()-1) continue;
+        swap(arr[i],arr[i+1])
+    }
+}*/
