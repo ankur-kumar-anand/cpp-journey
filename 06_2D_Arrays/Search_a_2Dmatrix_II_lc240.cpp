@@ -6,54 +6,6 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
     int m = matrix.size();
     int n = matrix[0].size();
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-
-            if (matrix[i][j] == target) {
-                return true;
-            }
-        }
-    }
-
-    return false;
-}
-
-int main() {
-
-    vector<vector<int>> matrix = {
-        {1, 4, 7, 11, 15},
-        {2, 5, 8, 12, 19},
-        {3, 6, 9, 16, 22},
-        {10, 13, 14, 17, 24},
-        {18, 21, 23, 26, 30}
-    };
-
-    int target;
-
-    cout << "Enter target: ";
-    cin >> target;
-
-    bool result = searchMatrix(matrix, target);
-
-    if (result) {
-        cout << "true";
-    }
-    else {
-        cout << "false";
-    }
-
-    return 0;
-}
-
-//Method:2//
-/*#include <iostream>
-#include <vector>
-using namespace std;
-
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int m = matrix.size();
-    int n = matrix[0].size();
-
     // Start from the top-right corner
     int i = 0;
     int j = n - 1;
@@ -98,9 +50,73 @@ int main() {
     }
 
     return 0;
-}*/
+}
 
-/*//Search a 2D matrix II : leetcode 240
+//---> Brute Force Method : Sorting
+/*#include <iostream>
+#include <vector>
+using namespace std;
+
+bool searchMatrix(vector<vector<int>>& matrix, int target) {
+    int m = matrix.size();
+    int n = matrix[0].size();
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+
+            if (matrix[i][j] == target) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+int main() {
+
+    vector<vector<int>> matrix = {
+        {1, 4, 7, 11, 15},
+        {2, 5, 8, 12, 19},
+        {3, 6, 9, 16, 22},
+        {10, 13, 14, 17, 24},
+        {18, 21, 23, 26, 30}
+    };
+
+    int target;
+
+    cout << "Enter target: ";
+    cin >> target;
+
+    bool result = searchMatrix(matrix, target);
+
+    if (result) {
+        cout << "true";
+    }
+    else {
+        cout << "false";
+    }
+
+    return 0;
+}
+*/
+
+//Search a 2D matrix II : leetcode 240 --->Efficient method : staircase search !
+/*class Solution{
+public:
+    bool searchMatrix(vector<vector<int>>& arr, int target){
+        int m=arr.size(), n=arr[0].size();
+        int i=0,j=n-1;
+        while(i<m && j>=0){
+            if(arr[i][j]>target) j--;
+            else if(arr[i][j]<target) i++;
+            else return true;
+        }
+        return false; //Tc = O(m+n)
+    }
+};*/
+
+/*//Search a 2D matrix II : leetcode 240 ---> Brute Force method: Sorting
 class Solution{
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target){
