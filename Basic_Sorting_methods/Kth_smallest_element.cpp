@@ -1,5 +1,5 @@
-//Method 1 - Through selection sort.
-#include <iostream>
+//Method 1 - Through selection sort. 
+/*#include <iostream>
 using namespace std;
 
 int main() {
@@ -35,6 +35,25 @@ int main() {
     // Kth smallest element
     cout << k << "th smallest element = "
          << arr[k - 1] << endl;
+
+    return 0;
+}*/
+
+//Method-2
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[] = {7, 10, 4, 3, 20, 15};
+    int n = 6;
+    int k = 3;
+
+    // Sort the array in ascending order
+    sort(arr, arr + n);
+
+    // Kth smallest element is at index k-1
+    cout << "Kth smallest element = " << arr[k - 1] << endl;
 
     return 0;
 }
